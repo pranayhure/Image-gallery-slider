@@ -12,14 +12,34 @@
             display: block;
             margin: 20px auto;
         }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
     <img src="./image/one.jpg" class="img" />
     <div class="btn-container">
        
-        <button type="button">Prev </button>
-        <button type="button">Next </button>
+        <button type="button" class="btn"  onclick="Prev()">
+            Prev
+         </button>
+        <button type="button" class="btn"  onclick="next()" >
+            Next 
+        </button>
     </div>
+    <script>
+        const images = [
+            "./image/one.jpg",
+            "./image/two.jpg",
+            "./image/three.jpg",
+            "./image/fore.jpg"
+        ]
+
+    </script>
 </body>
 </html>
