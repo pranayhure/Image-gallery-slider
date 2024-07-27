@@ -13,24 +13,40 @@
             margin: 20px auto;
         }
         .btn-container{
-            display: flex;
-            justify-content: center;
+            display:block;
+           width: fit-content ;
+            position: relative;
+            margin: 10px auto;
         }
         .btn{
+            height: 70px;
             margin: 0 10px;
+            cursor: pointer;
+           
+        }
+        .btn-left{
+            position: absolute;
+            left:-54px;
+            top:110px
+            
+        }
+        .btn-right{
+            position: absolute;
+            right: -54px;
+            top:110px;
         }
     </style>
 </head>
 <body>
-    <img src="./image/one.jpg" class="img"  id="img"/>
+   
     <div class="btn-container">
+        <img src="./image/one.jpg" class="img"  id="img"/>
+        <img src="image/left-arrow.png" class="btn btn-left"  onclick="prev()">
+           
+        
+        <img src="image/right-arrow.png" class="btn btn-right"  onclick="next()" >
+            
        
-        <button type="button" class="btn"  onclick="prev()">
-            Prev
-         </button>
-        <button type="button" class="btn"  onclick="next()" >
-            Next 
-        </button>
     </div>
     <script>
         const imagesArr = [
@@ -63,6 +79,7 @@
         imgElement.src=imagesArr[imgIndex]
     
     }
+// setInterval(next,500);
     </script>
 </body>
 </html>
