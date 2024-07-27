@@ -52,6 +52,17 @@
 
       imgElement.src=imagesArr[imgIndex]
     }
+    function next(){
+        if( imgIndex == imagesArr.length - 1){
+            imgIndex = 0;
+        }
+        else{
+            imgIndex++;
+        }
+        const imgElement = document.getElementById('img');
+        imgElement.src=imagesArr[imgIndex]
+    
+    }
     </script>
 </body>
 </html>
