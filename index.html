@@ -22,10 +22,10 @@
     </style>
 </head>
 <body>
-    <img src="./image/one.jpg" class="img" />
+    <img src="./image/one.jpg" class="img"  id="img"/>
     <div class="btn-container">
        
-        <button type="button" class="btn"  onclick="Prev()">
+        <button type="button" class="btn"  onclick="prev()">
             Prev
          </button>
         <button type="button" class="btn"  onclick="next()" >
@@ -33,13 +33,25 @@
         </button>
     </div>
     <script>
-        const images = [
+        const imagesArr = [
             "./image/one.jpg",
             "./image/two.jpg",
             "./image/three.jpg",
             "./image/fore.jpg"
-        ]
+        ];
+      let imgIndex = 0;
+      function prev(){
+        if(imgIndex==0){
+            imgIndex = imagesArr.length - 1;
+      }
+      else{
+        imgIndex--;
+      }
 
+      const imgElement = document.getElementById('img');
+
+      imgElement.src=imagesArr[imgIndex]
+    }
     </script>
 </body>
 </html>
